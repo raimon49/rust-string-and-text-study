@@ -17,11 +17,11 @@ fn main() {
         assert_eq!(latin1_to_char(42), '*');
         assert_eq!(char_to_latin1('*'), Some(42));
 
-        assert_eq!("うどんudon".as_bytes(),
+        assert_eq!("うどん: udon".as_bytes(),
                    &[0xe3, 0x81, 0x86, // う
                      0xe3, 0x81, 0xa9, // ど
                      0xe3, 0x82, 0x93, // ん
-                     0x75, 0x64, 0x6f, 0x6e //:udon
+                     0x3a, 0x20, 0x75, 0x64, 0x6f, 0x6e //: udon
                    ]);
     }
 }
