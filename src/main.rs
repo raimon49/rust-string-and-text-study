@@ -29,5 +29,7 @@ fn main() {
         assert!('⑧'.is_numeric());
         assert!('q'.is_alphabetic());
         assert!('七'.is_alphabetic());
+        assert!('9'.is_alphanumeric()); // 数字かアルファベットならtrue
+        assert!(!'*'.is_alphanumeric());
     }
 }
