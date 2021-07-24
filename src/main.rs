@@ -27,5 +27,7 @@ fn main() {
         // char型の分類メソッド
         assert!('4'.is_numeric());
         assert!('⑧'.is_numeric());
+        assert!('q'.is_alphabetic());
+        assert!('七'.is_alphabetic());
     }
 }
