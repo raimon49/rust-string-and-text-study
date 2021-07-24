@@ -23,5 +23,9 @@ fn main() {
                      0xe3, 0x82, 0x93, // ん
                      0x3a, 0x20, 0x75, 0x64, 0x6f, 0x6e //: udon
                    ]);
+
+        // char型の分類メソッド
+        assert!('4'.is_numeric());
+        assert!('⑧'.is_numeric());
     }
 }
