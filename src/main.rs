@@ -31,5 +31,8 @@ fn main() {
         assert!('七'.is_alphabetic());
         assert!('9'.is_alphanumeric()); // 数字かアルファベットならtrue
         assert!(!'*'.is_alphanumeric());
+        assert!(' '.is_whitespace());
+        assert!('\n'.is_whitespace());
+        assert!('\u{A0}'.is_whitespace());
     }
 }
