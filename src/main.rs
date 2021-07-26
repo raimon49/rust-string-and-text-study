@@ -37,6 +37,7 @@ fn main() {
         assert!('\n'.is_control());     // 制御文字ならtrue
         assert!('\u{85}'.is_control());
 
-        assert_eq!('8'.to_digit(10), Some(8));
+        assert_eq!('8'.to_digit(10), Some(8));  // 10進数で数値に変換できればSome(N)が、できなければNoneが返る
+        assert_eq!('F'.to_digit(16), Some(15)); // 16進数で数値に変換できればSome(N)が、できなければNoneが返る
     }
 }
