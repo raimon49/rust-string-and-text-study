@@ -40,5 +40,6 @@ fn main() {
         assert_eq!('8'.to_digit(10), Some(8));  // 10進数で数値に変換できればSome(N)が、できなければNoneが返る
         assert_eq!('F'.to_digit(16), Some(15)); // 16進数で数値に変換できればSome(N)が、できなければNoneが返る
         assert_eq!(std::char::from_digit(15, 16), Some('f')); // 上記の逆変換
+        assert!(char::is_digit('f', 16));
     }
 }
