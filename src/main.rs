@@ -36,5 +36,7 @@ fn main() {
         assert!('\u{A0}'.is_whitespace());
         assert!('\n'.is_control());     // 制御文字ならtrue
         assert!('\u{85}'.is_control());
+
+        assert_eq!('8'.to_digit(10), Some(8));
     }
 }
