@@ -42,9 +42,9 @@ fn main() {
         assert_eq!(std::char::from_digit(15, 16), Some('f')); // 上記の逆変換
         assert!(char::is_digit('f', 16));
 
-        let mut upper = 's'.to_uppercase();
+        let mut upper = 's'.to_uppercase();  // 大文字化された文字列を生成するイテレータを返す
         assert!(!'s'.is_uppercase());
-        assert_eq!(upper.next(), Some('S'));
-        assert_eq!(upper.next(), None);
+        assert_eq!(upper.next(), Some('S')); // イテレータから1文字取り出す
+        assert_eq!(upper.next(), None);      // それ以上なければNoneが返る
     }
 }
