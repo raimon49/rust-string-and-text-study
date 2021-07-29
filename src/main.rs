@@ -50,5 +50,7 @@ fn main() {
         let ch = 'İ'; // トルコ語のドット付きiはiの後ろに\u{307} COMBING DOT ABOVEを付けたものと定義されている
         let mut lower = ch.to_lowercase();
         assert_eq!(lower.next(), Some('i'));
+        assert_eq!(lower.next(), Some('\u{307}'));
+        assert_eq!(lower.next(), None);
     }
 }
