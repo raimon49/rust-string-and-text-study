@@ -46,5 +46,9 @@ fn main() {
         assert!(!'s'.is_uppercase());
         assert_eq!(upper.next(), Some('S')); // イテレータから1文字取り出す
         assert_eq!(upper.next(), None);      // それ以上なければNoneが返る
+
+        let ch = 'İ'; // トルコ語のドット付きiはiの後ろに\u{307} COMBING DOT ABOVEを付けたものと定義されている
+        let mut lower = ch.to_lowercase();
+        assert_eq!(lower.next(), Some('i'));
     }
 }
