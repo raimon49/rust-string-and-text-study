@@ -55,5 +55,7 @@ fn main() {
 
         assert_eq!('B' as u32, 66);
         assert_eq!('二' as i8, -116); // 上位ビットは丸められる
+        assert_eq!(char::from(66), 'B');
+        assert_eq!(std::char::from_u32(0xd800), None); // UTF-16用に予約された領域
     }
 }
