@@ -52,5 +52,7 @@ fn main() {
         assert_eq!(lower.next(), Some('i'));
         assert_eq!(lower.next(), Some('\u{307}'));
         assert_eq!(lower.next(), None);
+
+        assert_eq!('B' as u32, 66);
     }
 }
