@@ -54,5 +54,6 @@ fn main() {
         assert_eq!(lower.next(), None);
 
         assert_eq!('B' as u32, 66);
+        assert_eq!('二' as i8, -116); // 上位ビットは丸められる
     }
 }
