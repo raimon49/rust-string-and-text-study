@@ -58,4 +58,9 @@ fn main() {
         assert_eq!(char::from(66), 'B');
         assert_eq!(std::char::from_u32(0xd800), None); // UTF-16用に予約された領域
     }
+    {
+        let s1 = "literal text".to_string();
+        let s2 = String::from("literal text");
+        assert_eq!(s1, s2);
+    }
 }
