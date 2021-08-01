@@ -62,5 +62,9 @@ fn main() {
         let s1 = "literal text".to_string();
         let s2 = String::from("literal text");
         assert_eq!(s1, s2);
+
+        let spacey = "man hat tan";
+        let spaceless: String = spacey.chars().filter(|c| !c.is_whitespace()).collect();
+        assert_eq!(spaceless, "manhattan");
     }
 }
