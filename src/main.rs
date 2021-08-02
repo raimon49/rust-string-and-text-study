@@ -66,5 +66,9 @@ fn main() {
         let spacey = "man hat tan";
         let spaceless: String = spacey.chars().filter(|c| !c.is_whitespace()).collect();
         assert_eq!(spaceless, "manhattan");
+
+        let onwed_str: &str = "str";
+        let copied_str: String = onwed_str.to_owned(); // &str型はCloneを実装できないがslice.to_owned()でコピーした新たなStringが取得できる
+        assert_eq!(onwed_str, &copied_str);
     }
 }
