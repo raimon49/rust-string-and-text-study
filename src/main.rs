@@ -77,5 +77,6 @@ fn main() {
         assert_eq!(&full[5..], "eeping");
         assert_eq!(&full[2..4], "ok");
         assert_eq!(full[..].len(), 11);
+        assert_eq!(full[5..].contains("boo"), false);
     }
 }
