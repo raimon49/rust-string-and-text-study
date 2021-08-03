@@ -71,4 +71,8 @@ fn main() {
         let copied_str: String = onwed_str.to_owned(); // &str型はCloneを実装できないがslice.to_owned()でコピーした新たなStringが取得できる
         assert_eq!(onwed_str, &copied_str);
     }
+    {
+        let full = "bookkeeping";
+        assert_eq!(&full[..4], "book");
+    }
 }
