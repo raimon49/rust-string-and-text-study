@@ -76,5 +76,6 @@ fn main() {
         assert_eq!(&full[..4], "book");
         assert_eq!(&full[5..], "eeping");
         assert_eq!(&full[2..4], "ok");
+        assert_eq!(full[..].len(), 11);
     }
 }
