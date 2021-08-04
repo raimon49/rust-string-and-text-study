@@ -79,5 +79,7 @@ fn main() {
         assert_eq!(full[..].len(), 11);
         assert_eq!(full[5..].contains("boo"), false);
         assert_eq!(full[0..0].is_empty(), true);
+
+        assert_eq!("abcd".split_at(2), ("ab", "cd"));
     }
 }
