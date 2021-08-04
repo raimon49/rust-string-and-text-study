@@ -81,5 +81,7 @@ fn main() {
         assert_eq!(full[0..0].is_empty(), true);
 
         assert_eq!("abcd".split_at(2), ("ab", "cd"));
+        assert_eq!("abcd".is_char_boundary(1), true); // 指定されたバイトオフセットが文字境界ならtrue
+        assert_eq!("ああ".is_char_boundary(1), false);
     }
 }
