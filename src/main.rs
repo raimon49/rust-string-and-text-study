@@ -88,5 +88,7 @@ fn main() {
         let mut s = "abcd".to_string();
         s.push('e');
         assert_eq!("abcde", s);
+        s.push_str("fghij");
+        assert_eq!("abcdefghij", s);
     }
 }
