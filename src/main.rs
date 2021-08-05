@@ -84,4 +84,9 @@ fn main() {
         assert_eq!("abcd".is_char_boundary(1), true); // 指定されたバイトオフセットが文字境界ならtrue
         assert_eq!("ああ".is_char_boundary(1), false);
     }
+    {
+        let mut s = "abcd".to_string();
+        s.push('e');
+        assert_eq!("abcde", s);
+    }
 }
