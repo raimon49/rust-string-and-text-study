@@ -92,6 +92,7 @@ fn main() {
         assert_eq!("abcdefghij", s);
 
         let mut also_spaceless = "con".to_string();
-        also_spaceless.extend("tri but tion".split_whitespace());
+        also_spaceless.extend("tri but ion".split_whitespace());
+        assert_eq!(also_spaceless, "contribution");
     }
 }
