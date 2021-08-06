@@ -90,5 +90,8 @@ fn main() {
         assert_eq!("abcde", s);
         s.push_str("fghij");
         assert_eq!("abcdefghij", s);
+
+        let mut also_spaceless = "con".to_string();
+        also_spaceless.extend("tri but tion".split_whitespace());
     }
 }
