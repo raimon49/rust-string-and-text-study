@@ -94,5 +94,9 @@ fn main() {
         let mut also_spaceless = "con".to_string();
         also_spaceless.extend("tri but ion".split_whitespace());
         assert_eq!(also_spaceless, "contribution");
+
+        let mut x = "xz".to_string();
+        x.insert(1, 'y');
+        assert_eq!(x, "xyz");
     }
 }
