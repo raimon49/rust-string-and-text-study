@@ -98,5 +98,9 @@ fn main() {
         let mut x = "xz".to_string();
         x.insert(1, 'y');
         assert_eq!(x, "xyz");
+
+        let mut z = "z".to_string();
+        z.insert_str(0, "xy");
+        assert_eq!(z, "xyz");
     }
 }
