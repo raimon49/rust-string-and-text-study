@@ -107,6 +107,8 @@ fn main() {
         use std::fmt::Write;
 
         let mut letter = String::new();
+        // write!/writeln!マクロは出力ストリームに書き出すためResultを返す
+        // see) https://doc.rust-lang.org/std/macro.writeln.html
         writeln!(letter, "Whose {} these are I think I know", "rutabagas").unwrap(); // .unwrap(); でなく ?;だとコンパイラが警告を出す
         writeln!(letter, "His house is in the village throgh;").unwrap();
         assert_eq!(letter, "Whose rutabagas these are I think I know\n\
