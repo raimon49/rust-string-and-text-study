@@ -103,4 +103,11 @@ fn main() {
         z.insert_str(0, "xy");
         assert_eq!(z, "xyz");
     }
+    {
+        use std::fmt::Write;
+
+        let mut letter = String::new();
+        writeln!(letter, "Whose {} these are I think I know", "rutabagas").unwrap(); // .unwrap(); でなく ?;だとコンパイラが警告を出す
+        assert_eq!(letter, "Whose rutabagas these are I think I know\n");
+    }
 }
