@@ -108,6 +108,8 @@ fn main() {
 
         let mut letter = String::new();
         writeln!(letter, "Whose {} these are I think I know", "rutabagas").unwrap(); // .unwrap(); でなく ?;だとコンパイラが警告を出す
-        assert_eq!(letter, "Whose rutabagas these are I think I know\n");
+        writeln!(letter, "His house is in the village throgh;").unwrap();
+        assert_eq!(letter, "Whose rutabagas these are I think I know\n\
+                            His house is in the village throgh;\n");
     }
 }
