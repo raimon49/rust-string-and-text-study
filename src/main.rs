@@ -117,5 +117,8 @@ fn main() {
         let left = "partners".to_string();
         let mut right = "crime".to_string();
         assert_eq!(left + " in " + &right, "partners in crime");
+
+        right += " doesn't pay";
+        assert_eq!(right, "crime doesn't pay");
     }
 }
