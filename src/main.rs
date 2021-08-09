@@ -113,5 +113,9 @@ fn main() {
         writeln!(letter, "His house is in the village throgh;").unwrap();
         assert_eq!(letter, "Whose rutabagas these are I think I know\n\
                             His house is in the village throgh;\n");
+
+        let left = "partners".to_string();
+        let mut right = "crime".to_string();
+        assert_eq!(left + " in " + &right, "partners in crime");
     }
 }
