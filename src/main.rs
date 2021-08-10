@@ -120,5 +120,8 @@ fn main() {
 
         right += " doesn't pay";
         assert_eq!(right, "crime doesn't pay");
+
+        right.clear();
+        assert_eq!(right.len(), 0);
     }
 }
