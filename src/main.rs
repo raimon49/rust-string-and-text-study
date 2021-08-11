@@ -124,6 +124,9 @@ fn main() {
         right.truncate(4);
         assert_eq!(right, "crim");
 
+        assert_eq!(right.remove(1), 'r');
+        assert_eq!(right, "cim");
+
         right.clear();
         assert_eq!(right.len(), 0);
     }
