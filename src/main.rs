@@ -129,5 +129,8 @@ fn main() {
 
         right.clear();
         assert_eq!(right.len(), 0);
+
+        let mut choco = "chocolate".to_string();
+        assert_eq!(choco.drain(3..6).collect::<String>(), "col");
     }
 }
