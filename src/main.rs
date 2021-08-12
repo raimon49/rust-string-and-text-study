@@ -132,5 +132,6 @@ fn main() {
 
         let mut choco = "chocolate".to_string();
         assert_eq!(choco.drain(3..6).collect::<String>(), "col");
+        assert_eq!(choco, "choate");
     }
 }
