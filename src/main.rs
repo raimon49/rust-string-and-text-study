@@ -137,4 +137,8 @@ fn main() {
         winston.drain(2..6);
         assert_eq!(winston, "Chill");
     }
+    {
+        let haystack = "One fine day, in the middle of the night";
+        assert_eq!(haystack.find(','), Some(12));
+    }
 }
