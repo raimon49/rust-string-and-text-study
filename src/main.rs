@@ -145,7 +145,7 @@ fn main() {
         assert_eq!("April 2".find(char::is_numeric), Some(6));   // 同上
 
         assert_eq!("## Elephants"
-                   .trim_left_matches(|ch: char| ch == '#' || ch.is_whitespace()),
+                   .trim_start_matches(|ch: char| ch == '#' || ch.is_whitespace()),
                    "Elephants");
     }
 }
