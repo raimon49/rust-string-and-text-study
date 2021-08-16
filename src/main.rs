@@ -147,5 +147,9 @@ fn main() {
         assert_eq!("## Elephants"
                    .trim_start_matches(|ch: char| ch == '#' || ch.is_whitespace()),
                    "Elephants");
+
+        let code = "\t    function noodle() { ";
+        assert_eq!(code.trim_start_matches(&[' ', '\t'] as &[char]),
+                   "function noodle() { ");
     }
 }
