@@ -149,7 +149,7 @@ fn main() {
                    "Elephants");
 
         let code = "\t    function noodle() { ";
-        assert_eq!(code.trim_start_matches(&[' ', '\t'] as &[char]),
+        assert_eq!(code.trim_start_matches(&[' ', '\t'] as &[char]), // char値のスライスは配列リテラルで書いた場合、型を合わせるためas式が必要
                    "function noodle() { ");
     }
 }
