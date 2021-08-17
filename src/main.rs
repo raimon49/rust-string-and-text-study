@@ -142,7 +142,7 @@ fn main() {
         assert_eq!(haystack.find(','), Some(12));
         assert_eq!(haystack.find("night"), Some(35));
         assert_eq!(haystack.find(char::is_whitespace), Some(3)); // パターンとしてのFnMut(char) -> boolは、クロージャがtrueを返す1文字にマッチ
-        assert_eq!("April 2".find(char::is_numeric), Some(6));   // 同上
+        assert_eq!("April 2".find(char::is_numeric), Some(6));   // 同上（数字にマッチ）
 
         assert_eq!("## Elephants"
                    .trim_start_matches(|ch: char| ch == '#' || ch.is_whitespace()),
