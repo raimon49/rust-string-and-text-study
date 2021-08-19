@@ -156,6 +156,7 @@ fn main() {
         assert!(haystack.starts_with("One"));
         assert!(haystack.ends_with("night"));
 
+        // 見つかったバイトオフセットiをSome(i)として返す
         let quip = "We also know there are known unknowns";
         assert_eq!(quip.find("know"), Some(8));
         assert_eq!(quip.rfind("know"), Some(31));
