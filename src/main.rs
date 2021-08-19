@@ -154,5 +154,6 @@ fn main() {
 
         assert!(haystack.contains("middle"));
         assert!(haystack.starts_with("One"));
+        assert!(haystack.ends_with("night"));
     }
 }
