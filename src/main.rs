@@ -153,5 +153,6 @@ fn main() {
                    "function noodle() { ");
 
         assert!(haystack.contains("middle"));
+        assert!(haystack.starts_with("One"));
     }
 }
