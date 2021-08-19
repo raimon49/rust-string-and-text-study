@@ -155,5 +155,11 @@ fn main() {
         assert!(haystack.contains("middle"));
         assert!(haystack.starts_with("One"));
         assert!(haystack.ends_with("night"));
+
+        let quip = "We also know there are known unknowns";
+        assert_eq!(quip.find("know"), Some(8));
+        assert_eq!(quip.rfind("know"), Some(31));
+        assert_eq!(quip.find("ya know"), None);
+        assert_eq!(quip.rfind(char::is_uppercase), Some(0));
     }
 }
