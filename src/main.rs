@@ -169,5 +169,8 @@ fn main() {
         assert_eq!("`Borrow` and `BorrowMut`"
                    .replace(|ch:char| !ch.is_alphanumeric(), ""),
                    "BorrowandBorrowMut");
+        assert_eq!("This is a soup" // replacen()は3つ目の引数で指定された回数しか置換しない
+                   .replacen('s', "S", 2),
+                   "ThiS iS a soup");
     }
 }
