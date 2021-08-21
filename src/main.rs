@@ -162,5 +162,9 @@ fn main() {
         assert_eq!(quip.rfind("know"), Some(31));
         assert_eq!(quip.find("ya know"), None);
         assert_eq!(quip.rfind(char::is_uppercase), Some(0));
+
+        assert_eq!("The only thing we have to fear is fear itself"
+                   .replace("fear", "spin"),
+                   "The only thing we have to spin is spin itself");
     }
 }
