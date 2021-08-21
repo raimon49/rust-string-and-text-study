@@ -166,5 +166,8 @@ fn main() {
         assert_eq!("The only thing we have to fear is fear itself"
                    .replace("fear", "spin"),
                    "The only thing we have to spin is spin itself");
+        assert_eq!("`Borrow` and `BorrowMut`"
+                   .replace(|ch:char| !ch.is_alphanumeric(), ""),
+                   "BorrowandBorrowMut");
     }
 }
