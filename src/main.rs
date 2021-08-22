@@ -180,5 +180,7 @@ fn main() {
                         (2, 'l'),
                         (3, 'a'),
                         (4, 'n')]);
+        assert_eq!("Élan".bytes().collect::<Vec<_>>(),
+                   vec![195, 137, b'l', b'a', b'n']);
     }
 }
