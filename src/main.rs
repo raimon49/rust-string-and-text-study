@@ -173,4 +173,11 @@ fn main() {
                    .replacen('s', "S", 2),
                    "ThiS iS a soup");
     }
+    {
+        assert_eq!("Élan".char_indices().collect::<Vec<_>>(),
+                   vec![(0, 'É'), // 1文字だが2バイト
+                        (2, 'l'),
+                        (3, 'a'),
+                        (4, 'n')]);
+    }
 }
