@@ -174,8 +174,9 @@ fn main() {
                    "ThiS iS a soup");
     }
     {
+        // slice.char_indices()はslice上の各文字とバイトオフセット位置を生成するイテレータを返す
         assert_eq!("Élan".char_indices().collect::<Vec<_>>(),
-                   vec![(0, 'É'), // 1文字だが2バイト
+                   vec![(0, 'É'), // 1文字だが2バイトの長さがあり、次のオフセットは+2される
                         (2, 'l'),
                         (3, 'a'),
                         (4, 'n')]);
