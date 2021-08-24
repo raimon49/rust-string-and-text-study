@@ -185,6 +185,6 @@ fn main() {
                    vec![195, 137, b'l', b'a', b'n']);
 
         assert_eq!("jimb:1000:Jim Blandy:".split(':').collect::<Vec<_>>(),
-                   vec!["jimb", "1000", "Jim Blandy", ""]);
+                   vec!["jimb", "1000", "Jim Blandy", ""]); // 最期のpattern「：」で分割された後ろに空文字列が生成
     }
 }
