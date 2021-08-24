@@ -183,5 +183,8 @@ fn main() {
         // slice.bytes()はslice上の各バイトを生成するイテレータを返す（UTF-8エンコードされた値はそのまま返す）
         assert_eq!("Élan".bytes().collect::<Vec<_>>(),
                    vec![195, 137, b'l', b'a', b'n']);
+
+        assert_eq!("jimb:1000:Jim Blandy:".split(':').collect::<Vec<_>>(),
+                   vec!["jimb", "1000", "Jim Blandy", ""]);
     }
 }
