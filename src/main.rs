@@ -185,12 +185,12 @@ fn main() {
                    vec![195, 137, b'l', b'a', b'n']);
 
         assert_eq!("jimb:1000:Jim Blandy:".split(':').collect::<Vec<_>>(),
-                   vec!["jimb", "1000", "Jim Blandy", ""]); // 最期のpattern「：」で分割された後ろに空文字列が生成
+                   vec!["jimb", "1000", "Jim Blandy", ""]); // 最後のpattern「：」で分割された後ろに空文字列が生成
 
         assert_eq!("127.0.0.1 localhost\n\
                     127.0.0.1 www.reddit.com\n"
                    .split_terminator('\n').collect::<Vec<_>>(),
                    vec!["127.0.0.1 localhost",
-                        "127.0.0.1 www.reddit.com"]);
+                        "127.0.0.1 www.reddit.com"]); // 最後の""は生成されていない点がsplit()と異なる点に注意
     }
 }
