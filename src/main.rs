@@ -192,5 +192,15 @@ fn main() {
                    .split_terminator('\n').collect::<Vec<_>>(),
                    vec!["127.0.0.1 localhost",
                         "127.0.0.1 www.reddit.com"]); // 最後の""は生成されていない点がsplit()と異なる点に注意
+
+        let poem = "This  is  just  to say\n\
+                    I have eaten\n\
+                    the plumus\n\
+                    again\n";
+        assert_eq!(poem.split_whitespace().collect::<Vec<_>>(),
+                   vec!["This", "is", "just", "to", "say",
+                        "I", "have", "eaten",
+                        "the", "plumus",
+                        "again"]);
     }
 }
