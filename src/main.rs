@@ -193,6 +193,7 @@ fn main() {
                    vec!["127.0.0.1 localhost",
                         "127.0.0.1 www.reddit.com"]); // 最後の""は生成されていない点がsplit()と異なる点に注意
 
+        // split_whitespace()のホワイトスペース定義はchar::is_whitespaceに準じる
         let poem = "This  is  just  to say\n\
                     I have eaten\n\
                     the plumus\n\
