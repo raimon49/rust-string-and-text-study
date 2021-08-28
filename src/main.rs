@@ -203,5 +203,7 @@ fn main() {
                         "I", "have", "eaten",
                         "the", "plumus",
                         "again"]);
+
+        assert_eq!("\t*.rs  ".trim(), "*.rs");
     }
 }
