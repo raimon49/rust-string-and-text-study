@@ -204,6 +204,8 @@ fn main() {
                         "the", "plumus",
                         "again"]);
 
+        // trim_start()（旧:trim_left()）は先頭のホワイトスペースのみ削除
+        // trim_end() （旧:trim_right()）は末尾のホワイトスペースのみ削除
         assert_eq!("\t*.rs  ".trim(), "*.rs");
         assert_eq!("\t*.rs  ".trim_start(), "*.rs  ");
         assert_eq!("\t*.rs  ".trim_end(), "\t*.rs");
