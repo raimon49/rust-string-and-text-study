@@ -205,5 +205,7 @@ fn main() {
                         "again"]);
 
         assert_eq!("\t*.rs  ".trim(), "*.rs");
+        assert_eq!("\t*.rs  ".trim_start(), "*.rs  ");
+        assert_eq!("\t*.rs  ".trim_end(), "\t*.rs");
     }
 }
