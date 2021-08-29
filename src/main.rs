@@ -210,6 +210,9 @@ fn main() {
         assert_eq!("\t*.rs  ".trim_start(), "*.rs  ");
         assert_eq!("\t*.rs  ".trim_end(), "\t*.rs");
 
+        // patternにマッチするものを全て削除したサブスライスを返す
+        // trim_start_matches()は先頭のpattern全て削除
+        // trim_end_matches()は末尾のpattern全て削除
         assert_eq!("001990".trim_matches('0'), "199");
         assert_eq!("001990".trim_start_matches('0'), "1990");
         assert_eq!("001990".trim_end_matches('0'), "00199");
