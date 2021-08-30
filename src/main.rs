@@ -221,5 +221,7 @@ fn main() {
         use std::str::FromStr;
 
         assert_eq!(usize::from_str("3628800"), Ok(3628800));
+        assert_eq!(f64::from_str("128.5625"), Ok(128.5625));
+        assert_eq!(bool::from_str("true"), Ok(true));
     }
 }
