@@ -217,4 +217,9 @@ fn main() {
         assert_eq!("001990".trim_start_matches('0'), "1990");
         assert_eq!("001990".trim_end_matches('0'), "00199");
     }
+    {
+        use std::str::FromStr;
+
+        assert_eq!(usize::from_str("3628800"), Ok(3628800));
+    }
 }
