@@ -225,6 +225,7 @@ fn main() {
         assert_eq!(f64::from_str("128.5625"), Ok(128.5625));
         assert_eq!(bool::from_str("true"), Ok(true));
 
+        // parseできない文字列はResultがErrとなる
         assert!(f64::from_str("not a float at all").is_err());
         assert!(bool::from_str("TRUE").is_err());
     }
