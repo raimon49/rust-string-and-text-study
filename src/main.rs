@@ -226,5 +226,6 @@ fn main() {
         assert_eq!(bool::from_str("true"), Ok(true));
 
         assert!(f64::from_str("not a float at all").is_err());
+        assert!(bool::from_str("TRUE").is_err());
     }
 }
