@@ -236,6 +236,7 @@ fn main() {
         assert_eq!(address,
                    Ok(to_addr));
 
+        // sliceからFromStrを実装している任意の型にパースするparse()メソッドでもIpAddr型が得られる
         let other_address = "fe80::0000:3ea9:f4ff:fe34:7a50".parse::<IpAddr>();
         assert_eq!(other_address,
                    Ok(to_addr));
