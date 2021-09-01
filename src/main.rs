@@ -235,5 +235,9 @@ fn main() {
         let to_addr = IpAddr::from([0xfe80, 0, 0, 0, 0x3ea9, 0xf4ff, 0xfe34, 0x7a50]);
         assert_eq!(address,
                    Ok(to_addr));
+
+        let other_address = "fe80::0000:3ea9:f4ff:fe34:7a50".parse::<IpAddr>();
+        assert_eq!(other_address,
+                   Ok(to_addr));
     }
 }
