@@ -241,4 +241,7 @@ fn main() {
         assert_eq!(other_address,
                    Ok(to_addr));
     }
+    {
+        assert_eq!(format!("{}, wow", "doge"), "doge, wow");
+    }
 }
