@@ -244,5 +244,8 @@ fn main() {
     {
         assert_eq!(format!("{}, wow", "doge"), "doge, wow");
         assert_eq!(format!("{}", true), "true");
+        assert_eq!(format!("({:.3}, {:.3})",
+                           0.5, f64::sqrt(3.0)/2.0),
+                   "(0.500, 0.866)");
     }
 }
