@@ -243,5 +243,6 @@ fn main() {
     }
     {
         assert_eq!(format!("{}, wow", "doge"), "doge, wow");
+        assert_eq!(format!("{}", true), "true");
     }
 }
