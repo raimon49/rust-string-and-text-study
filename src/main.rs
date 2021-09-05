@@ -246,5 +246,7 @@ fn main() {
         assert_eq!(format!("({:.3}, {:.3})",
                            0.5, f64::sqrt(3.0)/2.0),
                    "(0.500, 0.866)");
+        let formatted_addr: String = format!("{}", address.unwrap());
+        assert_eq!(formatted_addr, "fe80::3ea9:f4ff:fe34:7a50");
     }
 }
