@@ -240,8 +240,7 @@ fn main() {
         let other_address = "fe80::0000:3ea9:f4ff:fe34:7a50".parse::<IpAddr>();
         assert_eq!(other_address,
                    Ok(to_addr));
-    }
-    {
+
         assert_eq!(format!("{}, wow", "doge"), "doge, wow");
         assert_eq!(format!("{}", true), "true");
         assert_eq!(format!("({:.3}, {:.3})",
