@@ -248,5 +248,6 @@ fn main() {
                    "(0.500, 0.866)");
         let formatted_addr: String = format!("{}", address.unwrap());
         assert_eq!(formatted_addr, "fe80::3ea9:f4ff:fe34:7a50");
+        assert_eq!(other_address.unwrap().to_string(), "fe80::3ea9:f4ff:fe34:7a50");
     }
 }
