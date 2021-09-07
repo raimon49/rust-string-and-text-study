@@ -249,5 +249,12 @@ fn main() {
         let formatted_addr: String = format!("{}", address.unwrap());
         assert_eq!(formatted_addr, "fe80::3ea9:f4ff:fe34:7a50");
         assert_eq!(other_address.unwrap().to_string(), "fe80::3ea9:f4ff:fe34:7a50"); // std::fmt::Displayを実装している型は自動的にstd::str::ToStringも実装されているため、format!を使わずto_string()を呼んでもよい
+
+        let addresses = vec![
+                             IpAddr::from_str("fe80::0000:3ea9:f4ff:fe34:7a50"),
+                             IpAddr::from_str("192.168.0.1")
+                            ];
+        assert_eq!(format!("{:?}", addresses),
+                  "[Ok(V6(fe80::3ea9:f4ff:fe34:7a50)), Ok(V4(192.168.0.1))]");
     }
 }
