@@ -254,6 +254,7 @@ fn main() {
                              IpAddr::from_str("fe80::0000:3ea9:f4ff:fe34:7a50"),
                              IpAddr::from_str("192.168.0.1")
                             ];
+        // format!マクロでフォーマット指示子{:?}を使うとstd::fmt::Debugの実装が呼ばれる
         assert_eq!(format!("{:?}", addresses),
                   "[Ok(V6(fe80::3ea9:f4ff:fe34:7a50)), Ok(V4(192.168.0.1))]");
     }
