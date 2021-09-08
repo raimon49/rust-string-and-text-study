@@ -258,4 +258,8 @@ fn main() {
         assert_eq!(format!("{:?}", addresses),
                   "[Ok(V6(fe80::3ea9:f4ff:fe34:7a50)), Ok(V4(192.168.0.1))]");
     }
+    {
+        let good_utf8: Vec<u8> = vec![0xe9, 0x8c, 0x86];
+        assert_eq!(String::from_utf8(good_utf8).ok(), Some("錆".to_string()));
+    }
 }
