@@ -263,6 +263,10 @@ fn main() {
         assert_eq!(String::from_utf8(good_utf8).ok(), Some("錆".to_string()));
 
         let bad_utf8: Vec<u8> = vec![0x9f, 0xf0, 0xa6, 0x80];
-        assert!(String::from_utf8(bad_utf8).is_err());
+        let result = String::from_utf8(bad_utf8);
+        assert!(result.is_err());
+        // エラー値からそのまま取り出すことができる
+        assert_eq!(result.unwrap_err().into_bytes(),
+                  vec![0x9f, 0xf0, 0xa6, 0x80]);
     }
 }
