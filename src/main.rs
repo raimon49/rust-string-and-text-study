@@ -269,4 +269,9 @@ fn main() {
         assert_eq!(result.unwrap_err().into_bytes(),
                   vec![0x9f, 0xf0, 0xa6, 0x80]);
     }
+    {
+        fn get_name() -> String {
+            std::env::var("USER").unwrap_or("whoever you are".to_string())
+        }
+    }
 }
