@@ -273,5 +273,7 @@ fn main() {
         fn get_name() -> String {
             std::env::var("USER").unwrap_or("whoever you are".to_string())
         }
+
+        println!("Greetings, {}!", get_name());
     }
 }
