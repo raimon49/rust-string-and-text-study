@@ -276,4 +276,15 @@ fn main() {
 
         println!("Greetings, {}!", get_name());
     }
+    {
+        use std::borrow::Cow;
+
+        fn get_name() -> Cow<'static, str> {
+            std::env::var("USER")
+                .map(|v| Cow::Owned(v))
+                .unwrap_or(Cow::Borrowed("whoever you are"))
+        }
+
+        println!("Greetings, {}!", get_name());
+    }
 }
