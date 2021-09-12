@@ -279,6 +279,9 @@ fn main() {
     {
         use std::borrow::Cow;
 
+        // Unix系OSでないとstd::env::var()で環境変数USERが取れないため、
+        // 取れたらmap()の結果のStringをCow::Ownedとして返す
+        // 失敗した場合はunwrap_or()の部分でstaticな&strがCow::Borrowedとして返される
         fn get_name() -> Cow<'static, str> {
             std::env::var("USER")
                 .map(|v| Cow::Owned(v))
