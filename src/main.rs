@@ -287,6 +287,9 @@ fn main() {
             //     .map(|v| Cow::Owned(v))
             //     .unwrap_or(Cow::Borrowed("whoever you are"))
 
+            // Cow(Clone-on-writeによる書き込む時までクローンを遅延させる)は文字列に使われることが多いため
+            // Cow<'static, str> には標準ライブラリで特別なサポートが入っている
+            // Stringと&strからCow<'static, str>へはFromとIntoによる変換があるため、下のコードは上と同じになる
             std::env::var("USER")
                 .map(|v| v.into())
                 .unwrap_or("whoever you are".into())
