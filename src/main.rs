@@ -283,9 +283,13 @@ fn main() {
         // 取れたらmap()の結果のStringをCow::Ownedとして返す
         // 失敗した場合はunwrap_or()の部分でstaticな&strがCow::Borrowedとして返される
         fn get_name() -> Cow<'static, str> {
+            // std::env::var("USER")
+            //     .map(|v| Cow::Owned(v))
+            //     .unwrap_or(Cow::Borrowed("whoever you are"))
+
             std::env::var("USER")
-                .map(|v| Cow::Owned(v))
-                .unwrap_or(Cow::Borrowed("whoever you are"))
+                .map(|v| v.into())
+                .unwrap_or("whoever you are".into())
         }
 
         println!("Greetings, {}!", get_name());
