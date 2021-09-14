@@ -297,4 +297,9 @@ fn main() {
 
         println!("Greetings, {}!", get_name());
     }
+    {
+        println!("{:.3}us: relocated {} at {:#x} to {:#x}, {} bytes",
+                 0.84391, "object",
+                 140737488346304_usize, 6299664_usize, 64);
+    }
 }
