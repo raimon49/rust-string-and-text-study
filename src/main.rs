@@ -298,6 +298,9 @@ fn main() {
         println!("Greetings, {}!", get_name());
     }
     {
+        // Rustのformatパラメータは{ which : how }の形式で指定する
+        //  whichの部分はindexや名前が指定でき、指定しなければ引数の左から順に採用される
+        //    howの部分は引数をフォーマットする方法を示す
         println!("{:.3}us: relocated {} at {:#x} to {:#x}, {} bytes",
                  0.84391, "object",
                  140737488346304_usize, 6299664_usize, 64);
