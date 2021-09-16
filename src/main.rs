@@ -304,5 +304,8 @@ fn main() {
         println!("{:.3}us: relocated {} at {:#x} to {:#x}, {} bytes",
                  0.84391, "object",
                  140737488346304_usize, 6299664_usize, 64);
+
+        assert_eq!(format!("number of {}: {}", "elephants", 19),
+                  "number of elephants: 19");
     }
 }
