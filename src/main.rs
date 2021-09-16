@@ -307,5 +307,8 @@ fn main() {
 
         assert_eq!(format!("number of {}: {}", "elephants", 19),
                   "number of elephants: 19");
+
+        assert_eq!(format!("from {1} to {0}", "the grave", "the cradle"),
+                  "from the cradle to the grave");
     }
 }
