@@ -311,5 +311,9 @@ fn main() {
         // { which : how }のwhich部を指定しているため順番が入れ替わってフォーマットされる
         assert_eq!(format!("from {1} to {0}", "the grave", "the cradle"),
                   "from the cradle to the grave");
+
+        // { which : how }のhow部を指定してデバッグ出力フォーマット
+        assert_eq!(format!("v = {:?}", vec![0,1,2,5,12,29]),
+                   "v = [0, 1, 2, 5, 12, 29]");
     }
 }
