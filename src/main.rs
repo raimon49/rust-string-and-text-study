@@ -315,5 +315,8 @@ fn main() {
         // { which : how }のhow部を指定してデバッグ出力フォーマット
         assert_eq!(format!("v = {:?}", vec![0,1,2,5,12,29]),
                    "v = [0, 1, 2, 5, 12, 29]");
+
+        assert_eq!(format!("name = {:?}", "Nemo"),
+                   "name = \"Nemo\"");
     }
 }
