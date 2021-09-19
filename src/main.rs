@@ -318,5 +318,8 @@ fn main() {
 
         assert_eq!(format!("name = {:?}", "Nemo"),
                    "name = \"Nemo\"");
+
+        assert_eq!(format!("{:8.2} km/s", 11.186),
+                  "   11.19 km/s");
     }
 }
