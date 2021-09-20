@@ -320,6 +320,9 @@ fn main() {
                    "name = \"Nemo\"");
 
         assert_eq!(format!("{:8.2} km/s", 11.186),
-                  "   11.19 km/s");
+                   "   11.19 km/s");
+
+        assert_eq!(format!("{:20} {:02x} {:02x}", "abc #42", 105, 42),
+                   "abc #42              69 2a");
     }
 }
