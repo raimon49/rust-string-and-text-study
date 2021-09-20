@@ -319,9 +319,11 @@ fn main() {
         assert_eq!(format!("name = {:?}", "Nemo"),
                    "name = \"Nemo\"");
 
+        // 8桁小数点2桁
         assert_eq!(format!("{:8.2} km/s", 11.186),
                    "   11.19 km/s");
 
+        // 20桁出力、2進数、2進数
         assert_eq!(format!("{:20} {:02x} {:02x}", "abc #42", 105, 42),
                    "abc #42              69 2a");
     }
