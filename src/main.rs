@@ -329,5 +329,8 @@ fn main() {
 
         assert_eq!(format!("{1:02x} {2:02x} {0}", "abc #42", 105, 42),
                    "69 2a abc #42");
+
+        assert_eq!(format!("{lsb:02x} {msb:02x} {insn}", insn="abc #42", lsb=105,msb=42),
+                   "69 2a abc #42");
     }
 }
