@@ -333,6 +333,7 @@ fn main() {
         assert_eq!(format!("{lsb:02x} {msb:02x} {insn}", insn="abc #42", lsb=105,msb=42),
                    "69 2a abc #42");
 
+        // 出力に'{'や'}'を使いたい場合は、テンプレート文字列中では{{や}}のように二重で書けばよい
         assert_eq!(format!("{{a, c}} ⊂ {{a, b, c}}"),
                    "{a, c} ⊂ {a, b, c}");
     }
