@@ -337,4 +337,15 @@ fn main() {
         assert_eq!(format!("{{a, c}} ⊂ {{a, b, c}}"),
                    "{a, c} ⊂ {a, b, c}");
     }
+    {
+        // formatパラメータ{ : how }部分の様々な指定
+        let input = "bookends";
+
+        // デフォルト
+        assert_eq!(format!("{}", input),
+                   "bookends");
+        // 最短フィールド幅
+        assert_eq!(format!("{:10}", input),
+                   "bookends  ");
+    }
 }
