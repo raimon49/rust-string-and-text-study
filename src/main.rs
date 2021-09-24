@@ -353,11 +353,13 @@ fn main() {
                    "book");
 
         // フィールド幅、テキスト長
-        assert_eq!(format!("{:12.20}", input),
+        assert_eq!(format!("{:12.20}", input), // フィールド最短12 テキスト最長20
                    "bookends    ");
-        assert_eq!(format!("{:4.20}", input),
+        assert_eq!(format!("{:4.20}", input),  // フィールド最短 4 テキスト最長20
                    "bookends");
-        assert_eq!(format!("{:4.6}", input),
+        assert_eq!(format!("{:4.6}", input),   // フィールド最短 4 テキスト最長6
                    "booken");
+        assert_eq!(format!("{:6.4}", input),   // フィールド最短 6 テキスト最長4
+                   "book  ");
     }
 }
