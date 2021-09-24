@@ -351,5 +351,13 @@ fn main() {
         // 最長テキスト長
         assert_eq!(format!("{:.4}", input),
                    "book");
+
+        // フィールド幅、テキスト長
+        assert_eq!(format!("{:12.20}", input),
+                   "bookends    ");
+        assert_eq!(format!("{:4.20}", input),
+                   "bookends");
+        assert_eq!(format!("{:4.6}", input),
+                   "booken");
     }
 }
