@@ -361,5 +361,9 @@ fn main() {
                    "booken");
         assert_eq!(format!("{:6.4}", input),   // フィールド最短 6 テキスト最長4
                    "book  ");
+
+        // 左寄せ、フィールド幅
+        assert_eq!(format!("{:<12}", input),
+                   "bookends    ");
     }
 }
