@@ -368,5 +368,8 @@ fn main() {
         // 中央揃え、フィールド幅
         assert_eq!(format!("{:^12}", input),
                    "  bookends  ");
+        // 右寄せ、フィールド幅
+        assert_eq!(format!("{:>12}", input),
+                   "    bookends");
     }
 }
