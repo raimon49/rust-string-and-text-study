@@ -379,7 +379,7 @@ fn main() {
                    "********book");
 
         // RustのテキストフォーマットはUnicodeの合字は無視して素朴に扱う
-        assert_eq!(format!("{:4}", "th\u{e9}"),
+        assert_eq!(format!("{:4}", "th\u{e9}"), // たまたま théの3文字目を含めて4文字フィールド長で扱う
                    "th\u{e9} ");
         assert_eq!(format!("{:4}", "the\u{301}"),
                    "the\u{301}");
