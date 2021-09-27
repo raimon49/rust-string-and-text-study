@@ -381,5 +381,7 @@ fn main() {
         // RustのテキストフォーマットはUnicodeの合字は無視して素朴に扱う
         assert_eq!(format!("{:4}", "th\u{e9}"),
                    "th\u{e9} ");
+        assert_eq!(format!("{:4}", "the\u{301}"),
+                   "the\u{301}");
     }
 }
