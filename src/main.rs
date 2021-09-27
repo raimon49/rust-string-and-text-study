@@ -377,5 +377,9 @@ fn main() {
         // '*'でパディング、右寄せ、フィールド幅、テキスト最長4
         assert_eq!(format!("{:*>12.4}", input),
                    "********book");
+
+        // RustのテキストフォーマットはUnicodeの合字は無視して素朴に扱う
+        assert_eq!(format!("{:4}", "th\u{e9}"),
+                   "th\u{e9} ");
     }
 }
