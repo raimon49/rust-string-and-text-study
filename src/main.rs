@@ -384,4 +384,12 @@ fn main() {
         assert_eq!(format!("{:4}", "the\u{301}"),
                    "the\u{301}");
     }
+    {
+        let input = 1234;
+
+        // デフォルト
+        assert_eq!(format!("{}", input),
+                   "1234");
+
+    }
 }
