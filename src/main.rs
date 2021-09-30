@@ -393,6 +393,11 @@ fn main() {
         // 符号
         assert_eq!(format!("{:+}", input),
                    "+1234");
+        // 最短フィールド幅
+        assert_eq!(format!("{:12}", input),
+                   "        1234");
+        assert_eq!(format!("{:2}", input),
+                   "1234");
 
     }
 }
