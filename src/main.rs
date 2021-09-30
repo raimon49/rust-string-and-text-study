@@ -390,6 +390,9 @@ fn main() {
         // デフォルト
         assert_eq!(format!("{}", input),
                    "1234");
+        // 符号
+        assert_eq!(format!("{:+}", input),
+                   "+1234");
 
     }
 }
