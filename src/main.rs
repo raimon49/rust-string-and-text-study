@@ -398,6 +398,9 @@ fn main() {
                    "        1234");
         assert_eq!(format!("{:2}", input),
                    "1234");
+        // 符号、最短フィールド幅
+        assert_eq!(format!("{:+12}", input),
+                   "       +1234");
 
     }
 }
