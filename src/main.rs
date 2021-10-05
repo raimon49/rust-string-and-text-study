@@ -410,6 +410,9 @@ fn main() {
         // 左寄せ、フィールド幅
         assert_eq!(format!("{:<12}", input),
                    "1234        ");
+        // 中央寄せ、フィールド幅
+        assert_eq!(format!("{:^12}", input),
+                   "    1234    ");
 
     }
 }
