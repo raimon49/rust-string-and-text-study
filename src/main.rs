@@ -416,6 +416,9 @@ fn main() {
         // 右寄せ、フィールド幅
         assert_eq!(format!("{:>12}", input),
                    "        1234");
+        // 左寄せ、符号、フィールド幅
+        assert_eq!(format!("{:<+12}", input),
+                   "+1234       ");
 
     }
 }
