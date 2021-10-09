@@ -431,6 +431,9 @@ fn main() {
         // 2進数
         assert_eq!(format!("{:b}", input),
                    "10011010010");
+        // フィールド幅、8進数
+        assert_eq!(format!("{:12o}", input),
+                   "        2322");
 
     }
 }
