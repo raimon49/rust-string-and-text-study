@@ -437,6 +437,9 @@ fn main() {
         // 符号、フィールド幅、16進数
         assert_eq!(format!("{:+12x}", input),
                    "        +4d2");
+        // 符号、フィールド幅、16進数（大文字）
+        assert_eq!(format!("{:+12X}", input),
+                   "        +4D2");
 
     }
 }
