@@ -434,6 +434,9 @@ fn main() {
         // フィールド幅、8進数
         assert_eq!(format!("{:12o}", input),
                    "        2322");
+        // 符号、フィールド幅、16進数
+        assert_eq!(format!("{:+12x}", input),
+                   "        +4d2");
 
     }
 }
