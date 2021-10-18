@@ -453,5 +453,8 @@ fn main() {
         // デフォルト
         assert_eq!(format!("{}", input),
                    "1234.5678");
+        // 精度
+        assert_eq!(format!("{:.2}", input),
+                   "1234.57");
     }
 }
