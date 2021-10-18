@@ -448,7 +448,7 @@ fn main() {
                    "+0x0000004d2");
     }
     {
-        let input = "1234.5678";
+        let input = 1234.5678;
 
         // デフォルト
         assert_eq!(format!("{}", input),
