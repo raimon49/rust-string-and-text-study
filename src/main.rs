@@ -456,5 +456,7 @@ fn main() {
         // 精度
         assert_eq!(format!("{:.2}", input),
                    "1234.57");
+        assert_eq!(format!("{:.6}", input),
+                   "1234.567800");
     }
 }
