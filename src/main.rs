@@ -472,5 +472,8 @@ fn main() {
         // 科学技術表記
         assert_eq!(format!("{:e}", input),
                   "1.2345678e3");
+        // 科学技術表記、精度
+        assert_eq!(format!("{:.3e}", input),
+                  "1.235e3");
     }
 }
