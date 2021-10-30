@@ -478,5 +478,7 @@ fn main() {
         // 科学技術表記、フィールド幅、精度
         assert_eq!(format!("{:12.3e}", input),
                   "     1.235e3");
+        assert_eq!(format!("{:12.3E}", input),
+                  "     1.235E3");
     }
 }
