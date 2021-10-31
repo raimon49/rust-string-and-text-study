@@ -481,4 +481,17 @@ fn main() {
         assert_eq!(format!("{:12.3E}", input),
                   "     1.235E3");
     }
+    {
+        use std::collections::HashMap;
+
+        let mut map = HashMap::new();
+        map.insert("Portland", (42.5237606, -122.6819273));
+        map.insert("Taipei",   (25.0375167,  121.5637));
+
+        // フォーマットパラメータ{:?}を用いるとRust標準ライブラリのパブリックな型は全て、
+        // プログラマの参考になるようなフォーマットで出力される
+        // 例) HashMap:
+        // {"Taipei": (25.0375167, 121.5637), "Portland": (42.5237606, -122.6819273)}
+        println!("{:?}", map);
+    }
 }
