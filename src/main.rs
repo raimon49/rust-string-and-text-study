@@ -514,4 +514,14 @@ fn main() {
         println!("{:?}", third);
         println!("{:#?}", third);
     }
+    {
+        use std::rc::Rc;
+
+        let original = Rc::new("mazurka".to_string());
+        let cloned = original.clone();
+        let impostor = Rc::new("mazurka".to_string());
+        println!("\n");
+        println!("text:     {}, {}, {}",       original, cloned, impostor);
+        println!("pointers: {:p}, {:p}, {:p}", original, cloned, impostor);
+    }
 }
