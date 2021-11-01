@@ -506,5 +506,12 @@ fn main() {
         //     ),
         // }
         println!("{:#?}", map);
+
+        // 自前で宣言する型も #[derive(Debug)] 構文でフォーマットが機能するようにできる
+        #[derive(Copy, Clone, Debug)]
+        struct Complex { r: f64, i: f64 };
+        let third = Complex { r: -0.5, i: f64::sqrt(0.75) };
+        println!("{:?}", third);
+        println!("{:#?}", third);
     }
 }
