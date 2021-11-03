@@ -523,5 +523,8 @@ fn main() {
         println!("\n");
         println!("text:     {}, {}, {}",       original, cloned, impostor);
         println!("pointers: {:p}, {:p}, {:p}", original, cloned, impostor);
+        // クローンしたポインタは同じアドレスを指しており、新しく作ったポインタは異なるアドレスを指している
+        assert_eq!(format!("{:p}", original), format!("{:p}", cloned));
+        assert_ne!(format!("{:p}", original), format!("{:p}", impostor));
     }
 }
