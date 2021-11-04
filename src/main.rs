@@ -527,4 +527,8 @@ fn main() {
         assert_eq!(format!("{:p}", original), format!("{:p}", cloned));
         assert_ne!(format!("{:p}", original), format!("{:p}", impostor));
     }
+    {
+        assert_eq!(format!("{1},{0},{2}", "zeroth", "first", "second"),
+                   "first,zeroth,second");
+    }
 }
