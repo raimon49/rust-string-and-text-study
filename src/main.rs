@@ -530,5 +530,8 @@ fn main() {
     {
         assert_eq!(format!("{1},{0},{2}", "zeroth", "first", "second"),
                    "first,zeroth,second");
+
+        assert_eq!(format!("{2:#06x},{1:b},{0:=>10}", "first", 10, 100),
+                   "0x0064,1010,=====first");
     }
 }
