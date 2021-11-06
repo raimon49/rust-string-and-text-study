@@ -534,5 +534,12 @@ fn main() {
         // フォーマット指示はコロンの後ろに書く
         assert_eq!(format!("{2:#06x},{1:b},{0:=>10}", "first", 10, 100),
                    "0x0064,1010,=====first");
+
+        // インデックスでなく引数名でも指定できる
+        assert_eq!(format!("{description:.<25}{quantity:2} @{price:5.2}",
+                           price=3.25,
+                           quantity=3,
+                           description="Maple Turmeric Latte"),
+                  "Maple Turmeric Latte..... 3 @ 3.25");
     }
 }
