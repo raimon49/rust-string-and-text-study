@@ -541,5 +541,10 @@ fn main() {
                            quantity=3,
                            description="Maple Turmeric Latte"),
                   "Maple Turmeric Latte..... 3 @ 3.25");
+
+        // インデックスによる指定、名前による指定、未指定を混在させると、インデックスでも名前でもない引数の左から順にマッチして行く
+        assert_eq!(format!("{mode} {2} {} {}",
+                          "people", "eater", "purple", mode="flying"),
+                  "flying purple people eater");
     }
 }
