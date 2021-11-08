@@ -546,5 +546,9 @@ fn main() {
         assert_eq!(format!("{mode} {2} {} {}",
                           "people", "eater", "purple", mode="flying"),
                   "flying purple people eater");
+
+        assert_eq!(format!("{:>1$}",
+                           "bookends", "abcdefghijk".len()),
+                  "   bookends");
     }
 }
