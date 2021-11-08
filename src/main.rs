@@ -547,6 +547,7 @@ fn main() {
                           "people", "eater", "purple", mode="flying"),
                   "flying purple people eater");
 
+        // フォーマット指示に「1$」と書くと、2つ目の引数を幅として扱う
         assert_eq!(format!("{:>1$}",
                            "bookends", "abcdefghijk".len()),
                   "   bookends");
