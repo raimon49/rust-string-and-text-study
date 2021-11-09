@@ -551,5 +551,9 @@ fn main() {
         assert_eq!(format!("{:>1$}",
                            "bookends", "abcdefghijk".len()),
                   "   bookends");
+        // 「引数名$」でも参照できる
+        assert_eq!(format!("{:>width$}",
+                           "bookends", width="abcdefghijk".len()),
+                  "   bookends");
     }
 }
