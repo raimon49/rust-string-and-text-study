@@ -568,5 +568,9 @@ fn main() {
                 write!(dest, "{} {} {}i", self.r, i_sign, f64::abs(self.i))
             }
         }
+
+        let one_twenty = Complex { r: -0.5, i: 0.866 };
+        assert_eq!(format!("{}", one_twenty),
+                   "-0.5 + 0.866i");
     }
 }
