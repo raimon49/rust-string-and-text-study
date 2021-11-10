@@ -556,4 +556,17 @@ fn main() {
                            "bookends", width="abcdefghijk".len()),
                   "   bookends");
     }
+    {
+        use std::fmt;
+
+        struct Complex { r: f64, i: f64 };
+
+        // 定義した型Complexにfmt::Displayを実装
+        impl fmt::Display for Complex {
+            fn fmt(&self, dest: &mut fmt::Formatter) -> fmt::Result {
+                let i_sign = if self.i < 0.0 { '-' } else { '+' };
+                write!(dest, "{} {} {}i", self.r, i_sign, f64::abs(self.i))
+            }
+        }
+    }
 }
