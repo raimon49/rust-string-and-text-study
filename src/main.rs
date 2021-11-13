@@ -585,5 +585,7 @@ fn main() {
         let ninety = Complex { r: 0.0, i: 2.0 };
         assert_eq!(format!("{}", ninety),
                    "0 + 2i");
+        assert_eq!(format!("{:#}", ninety), // 極座標表現が指定された時は dest.alternate() のifブロックに入る
+                   "2 ⊿ 90°");
     }
 }
