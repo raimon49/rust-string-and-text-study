@@ -582,5 +582,8 @@ fn main() {
         let two_forty = Complex { r: -0.5, i: -0.866 };
         assert_eq!(format!("{}", two_forty),
                    "-0.5 - 0.866i");
+        let ninety = Complex { r: 0.0, i: 2.0 };
+        assert_eq!(format!("{}", ninety),
+                   "0 + 2i");
     }
 }
