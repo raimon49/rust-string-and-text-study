@@ -588,4 +588,9 @@ fn main() {
         assert_eq!(format!("{:#}", ninety), // 極座標表現が指定された時は dest.alternate() のifブロックに入る
                    "2 ⊿ 90°");
     }
+    {
+        fn logging_enabled() -> bool {
+            true
+        }
+    }
 }
