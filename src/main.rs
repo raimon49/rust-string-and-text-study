@@ -592,5 +592,21 @@ fn main() {
         fn logging_enabled() -> bool {
             true
         }
+
+        use std::fs::OpenOptions;
+        use std::io::Write;
+
+        fn write_log_entry(entry: std::fmt::Arguments) {
+            if logging_enabled() {
+                let mut log_file = OpenOptions::new()
+                    .append(true)
+                    .create(true)
+                    .open("log-file-name")
+                    .expect("failed to open log file");
+
+                log_file.write_fmt(entry)
+                    .expect("failed to open log file");
+            }
+        }
     }
 }
