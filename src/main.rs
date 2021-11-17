@@ -608,5 +608,8 @@ fn main() {
                     .expect("failed to open log file");
             }
         }
+
+        // 呼び出しコード
+        // write_log_entry(format_args!("Hark {:?}\n", mysterious_value));
     }
 }
