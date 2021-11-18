@@ -611,5 +611,13 @@ fn main() {
 
         // 呼び出しコード
         // write_log_entry(format_args!("Hark {:?}\n", mysterious_value));
+        // 以下のようにマクロを定義して呼び出す方が綺麗になる
+        macro_rules! log {
+            ($format:tt, $($arg:expr),*) => (
+                write_log_entry(format_args!($format, $($arg),*))
+            )
+        }
+        // マクロ呼び出しコード
+        // log!("0 day and night, but this is wondrous strange! {:?}\n", mysterious_value);
     }
 }
