@@ -620,4 +620,14 @@ fn main() {
         // マクロ呼び出しコード
         // log!("0 day and night, but this is wondrous strange! {:?}\n", mysterious_value);
     }
+    {
+        extern crate regex;
+
+        use regex::Regex;
+
+        let semver = Regex::new(r"(\d+)\.(\d+)\.(\d+)(-[-.[:alnum:]]*)?").unwrap();
+
+        let haystack = r#"regex = 0.2.5"#;
+        assert!(semver.is_match(haystack));
+    }
 }
