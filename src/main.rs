@@ -629,5 +629,9 @@ fn main() {
 
         let haystack = r#"regex = 0.2.5"#;
         assert!(semver.is_match(haystack));
+
+        let captures = semver.captures(haystack)
+            .ok_or("semver regx should hav matched").unwrap();
+        assert_eq!(&captures[0], "0.2.5");
     }
 }
