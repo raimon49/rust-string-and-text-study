@@ -634,5 +634,8 @@ fn main() {
         let captures = semver.captures(haystack)
             .ok_or("semver regx should hav matched").unwrap();
         assert_eq!(&captures[0], "0.2.5"); // 「0.2.5」が正規表現パターンにマッチ
+        assert_eq!(&captures[1], "0");
+        assert_eq!(&captures[2], "2");
+        assert_eq!(&captures[3], "5");
     }
 }
