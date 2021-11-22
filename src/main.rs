@@ -639,5 +639,8 @@ fn main() {
         assert_eq!(&captures[3], "5");
         // インデックスで直接参照すると格納結果が無い時にパニックを起こすがCapters::getはOption<regex::Match>で返される
         assert_eq!(captures.get(4), None);
+        assert_eq!(captures.get(3).unwrap().start(), 12);
+        assert_eq!(captures.get(3).unwrap().end(), 13);
+        assert_eq!(captures.get(3).unwrap().as_str(), "5");
     }
 }
