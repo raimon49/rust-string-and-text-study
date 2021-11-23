@@ -642,5 +642,13 @@ fn main() {
         assert_eq!(captures.get(3).unwrap().start(), 12);
         assert_eq!(captures.get(3).unwrap().end(), 13);
         assert_eq!(captures.get(3).unwrap().as_str(), "5");
+
+        let section = "In the beginning, there was 1.0.0. \
+                       For a while, we used 1.0.1-beta, \
+                       but in the end, we settled on 1.2.4.";
+        let matches: Vec<&str> = semver.find_iter(section)
+            .map(|match_|match_.as_str())
+            .collect();
+        assert_eq!(matches, vec!["1.0.0", "1.0.1-beta", "1.2.4"]);
     }
 }
