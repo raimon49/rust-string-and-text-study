@@ -1,3 +1,6 @@
+#[macro_use]
+extern crate lazy_static; // an `extern crate` loading macros must be at the crate root
+
 fn main() {
     {
         fn latin1_to_char(latin1: u8) -> char {
@@ -650,5 +653,24 @@ fn main() {
             .map(|match_|match_.as_str())
             .collect();
         assert_eq!(matches, vec!["1.0.0", "1.0.1-beta", "1.2.4"]);
+    }
+    {
+        extern crate regex;
+
+        use regex::Regex;
+
+        lazy_static! {
+            static ref SEMVER: Regex = Regex::new(r"(\d+)\.(\d+)\.(\d+)(-[-.[:alnum:]]*)?").expect("error parsing regex");
+        }
+
+        use std::io::BufRead;
+
+        let stdin = std::io::stdin();
+        for line in stdin.lock().lines() {
+            let line_ = line.unwrap();
+            if let Some(match_) = SEMVER.find(&line_) {
+                println!("{}", match_.as_str());
+            }
+        }
     }
 }
