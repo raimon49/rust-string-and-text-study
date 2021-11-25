@@ -666,11 +666,11 @@ fn main() {
         use std::io::BufRead;
 
         let stdin = std::io::stdin();
-        for line in stdin.lock().lines() {
-            let line_ = line.unwrap();
-            if let Some(match_) = SEMVER.find(&line_) {
-                println!("{}", match_.as_str());
-            }
-        }
+        // for line in stdin.lock().lines() {
+        //     let line_ = line.unwrap();
+        //     if let Some(match_) = SEMVER.find(&line_) {
+        //         println!("{}", match_.as_str());
+        //     }
+        // }
     }
 }
