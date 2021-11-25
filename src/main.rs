@@ -666,6 +666,7 @@ fn main() {
         use std::io::BufRead;
 
         let stdin = std::io::stdin();
+        // キーボード入力を待ち、入力内容に大して正規表現マッチした結果を表示
         // for line in stdin.lock().lines() {
         //     let line_ = line.unwrap();
         //     if let Some(match_) = SEMVER.find(&line_) {
