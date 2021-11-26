@@ -660,6 +660,8 @@ fn main() {
         use regex::Regex;
 
         lazy_static! {
+            // 3rd parthのlazy_staticクレートで提供されるマクロで宣言したSEMVERは
+            // 最初に参照解決されたタイミングまで初期化が遅延されるためRegex::new()のコストを1回きりに最小化できる
             static ref SEMVER: Regex = Regex::new(r"(\d+)\.(\d+)\.(\d+)(-[-.[:alnum:]]*)?").expect("error parsing regex");
         }
 
