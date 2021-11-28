@@ -680,5 +680,13 @@ fn main() {
         // フランス語で茶を意味するtheのeは合成形と分解形の異なるコードポイントで表現可能
         assert!("th\u{e9}" != "the\u{301}");
         assert!("th\u{e9}" > "the\u{301}");
+
+        use std::hash::{Hash, Hasher};
+        use std::collections::hash_map::DefaultHasher;
+        fn hash<T: ?Sized + Hash>(t: &T) -> u64 {
+            let mut s = DefaultHasher::new();
+            t.hash(&mut s);
+            return s.finish();
+        }
     }
 }
