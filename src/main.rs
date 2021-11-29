@@ -688,5 +688,7 @@ fn main() {
             t.hash(&mut s);
             return s.finish();
         }
+
+        assert_eq!(hash("th\u{e9}"), 0x53e2d0734eb1dff3);
     }
 }
