@@ -692,4 +692,9 @@ fn main() {
         assert_eq!(hash("th\u{e9}"),   0x53e2d0734eb1dff3);
         assert_eq!(hash("the\u{301}"), 0x90d837f0a0928144);
     }
+    {
+        use unicode_normalization::UnicodeNormalization;
+
+        assert_eq!("Phò".nfd().collect::<String>(), "Pho\u{300}");
+    }
 }
