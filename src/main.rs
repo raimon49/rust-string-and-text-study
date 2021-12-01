@@ -696,5 +696,6 @@ fn main() {
         use unicode_normalization::UnicodeNormalization;
 
         assert_eq!("Phò".nfd().collect::<String>(), "Pho\u{300}");
+        assert_eq!("Phở".nfc().collect::<String>(), "Ph\u{1edf}");
     }
 }
