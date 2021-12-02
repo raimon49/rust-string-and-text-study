@@ -697,5 +697,8 @@ fn main() {
 
         assert_eq!("Phò".nfd().collect::<String>(), "Pho\u{300}");
         assert_eq!("Phở".nfc().collect::<String>(), "Ph\u{1edf}");
+
+        // 丸数字と合字「ffi」を正規化し、正規化された文字と比較
+        assert_eq!("① Di\u{fb03}culty".nfkc().collect::<String>(), "1 Difficulty");
     }
 }
